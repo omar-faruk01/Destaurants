@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:padding="20dp">
+
+  <TextView
+      android:id="@+id/appNameTV"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="App Name"
+      android:textSize="40dp"
+      />
+
+
+  <TextView
+      android:id="@+id/registerTV"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/appNameTV"
+      android:layout_centerHorizontal="true"
+      android:text="Join"
+      android:textSize="35dp"
+      android:padding="25dp"
+      />
+
+  <EditText
+      android:id="@+id/usernameET"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/registerTV"
+      android:ems="@integer/material_motion_duration_long_1"
+      android:hint="Username"
+      android:padding="15dp"
+      android:imeOptions="actionNext"
+      />
+
+  <EditText
+      android:id="@+id/emailET"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/usernameET"
+      android:ems="@integer/material_motion_duration_long_1"
+      android:hint="Email"
+      android:padding="15dp"
+      android:imeOptions="actionNext"
+      />
+
+  <EditText
+      android:id="@+id/passwordET"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/emailET"
+      android:ems="@integer/material_motion_duration_long_1"
+      android:hint="Password"
+      android:padding="15dp"
+      android:imeOptions="actionDone"
+      />
+
+  <Button
+      android:id="@+id/registerBtn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/passwordET"
+      android:backgroundTint="@color/black"
+      android:text="Register"
+      android:textSize="20sp"
+      />
+
+
+
+</RelativeLayout>

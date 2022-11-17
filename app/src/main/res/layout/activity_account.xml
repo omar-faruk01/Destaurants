@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity"
+    android:padding="20dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameTV"
+        android:text="Hello!"/>
+
+
+    // name
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Restaurant Name"
+        android:layout_below="@id/usernameTV"/>
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/nameLabel"
+        android:ems="8"
+        />
+
+    //address
+    <TextView
+        android:id="@+id/addrLabel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Address"
+        android:layout_below="@id/nameLabel"
+        />
+
+    <EditText
+        android:id="@+id/addrET"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/addrLabel"
+        android:layout_below="@id/nameET"
+        android:ems="8"
+        />
+
+    // City
+    <TextView
+        android:id="@+id/cityLabel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="City"
+        android:layout_below="@id/addrLabel"
+        />
+
+    <EditText
+        android:id="@+id/cityET"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/cityLabel"
+        android:layout_below="@id/addrET"
+        android:ems="8"
+        />
+
+    // State
+    <TextView
+        android:id="@+id/stateLabel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="State"
+        android:layout_below="@id/cityLabel"
+        />
+
+    <EditText
+        android:id="@+id/stateET"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/stateLabel"
+        android:layout_below="@id/cityET"
+        android:ems="8"
+        />
+
+    // Zip
+    <TextView
+        android:id="@+id/zipLabel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Zip Code"
+        android:layout_below="@id/stateLabel"
+        />
+
+    <EditText
+        android:id="@+id/zipET"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/zipLabel"
+        android:layout_below="@id/stateLabel"
+        android:ems="8"
+        />
+
+    //country
+    <TextView
+        android:id="@+id/countryLabel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Country"
+        android:layout_below="@id/zipLabel"
+        />
+
+    <EditText
+        android:id="@+id/countryET"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/countryLabel"
+        android:layout_below="@id/zipET"
+        android:ems="8"
+        />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryET"
+        android:text="Submit"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitBtn"
+        android:text="Sign Out"
+        android:id="@+id/signOutBtn"
+        />
+
+
+
+
+</RelativeLayout>
