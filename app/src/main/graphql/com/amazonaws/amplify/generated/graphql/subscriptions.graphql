@@ -1,0 +1,172 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
+) {
+  onCreateRestaurant(filter: $filter) {
+    id
+    name
+    address
+    city
+    state
+    zipCode
+    country
+    picture1
+    picture2
+    username
+    restrictions
+    category
+    rating
+    review {
+      items {
+        id
+        rating
+        comment
+        username
+        restaurantId
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        owner
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+subscription OnUpdateRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
+) {
+  onUpdateRestaurant(filter: $filter) {
+    id
+    name
+    address
+    city
+    state
+    zipCode
+    country
+    picture1
+    picture2
+    username
+    restrictions
+    category
+    rating
+    review {
+      items {
+        id
+        rating
+        comment
+        username
+        restaurantId
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        owner
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+subscription OnDeleteRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
+) {
+  onDeleteRestaurant(filter: $filter) {
+    id
+    name
+    address
+    city
+    state
+    zipCode
+    country
+    picture1
+    picture2
+    username
+    restrictions
+    category
+    rating
+    review {
+      items {
+        id
+        rating
+        comment
+        username
+        restaurantId
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+        owner
+      }
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+subscription OnCreateReview($filter: ModelSubscriptionReviewFilterInput) {
+  onCreateReview(filter: $filter) {
+    id
+    rating
+    comment
+    username
+    restaurantId
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+subscription OnUpdateReview($filter: ModelSubscriptionReviewFilterInput) {
+  onUpdateReview(filter: $filter) {
+    id
+    rating
+    comment
+    username
+    restaurantId
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+subscription OnDeleteReview($filter: ModelSubscriptionReviewFilterInput) {
+  onDeleteReview(filter: $filter) {
+    id
+    rating
+    comment
+    username
+    restaurantId
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
