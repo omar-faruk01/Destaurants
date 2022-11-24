@@ -13,10 +13,14 @@ import android.widget.TextView;
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amplifyframework.auth.AuthUser;
 import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.Restaurant;
+import com.amplifyframework.datastore.generated.model.Review;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.ArrayList;
 
 
 public class AccountActivity extends AppCompatActivity {
@@ -24,6 +28,8 @@ public class AccountActivity extends AppCompatActivity {
     EditText nameET, addressET, cityET, stateET, zipET, countryET;
     Button submitBtn, signOutBtn;
     TextView usernameTV;
+    ArrayList<String> restrictionList = new ArrayList<>();
+
     private static final String TAG = "AmplifyApp";
     private AWSMobileClient mobileClient;
 
@@ -42,22 +48,9 @@ public class AccountActivity extends AppCompatActivity {
         usernameTV = findViewById(R.id.usernameTV);
         signOutBtn = findViewById(R.id.signOutBtn);
 
-//        List<String> list=new ArrayList<String>();
-//
-//        list.add("Halal");
 
-//        Restaurant restaurant = Restaurant.builder()
-//                .name("Curry")
-//                .build();
 
-//        submitBtn.setOnClickListener(view -> {
-//
-//            Amplify.DataStore.save(
-//                    restaurant,
-//                    result -> Log.i("MyAmplifyApp", "Created a new post successfully"),
-//                    error -> Log.e("MyAmplifyApp",  "Error creating post", error)
-//            );
-//        });
+
     }
 
     @Override
@@ -93,6 +86,39 @@ public class AccountActivity extends AppCompatActivity {
                         error -> Log.i(TAG, error.toString())
                 );
             }
+        });
+
+        restrictionList.add("Pescatarian");
+        restrictionList.add("Halal");
+
+
+        Restaurant restaurant = Restaurant.builder()
+                .name("Bonefish Grill")
+                .address("660 W Big Beaver Rd")
+                .city("Troy")
+                .state("MI")
+                .country("USA")
+                .category("Desi")
+                .zipCode("48084")
+                .username(Amplify.Auth.getCurrentUser().getUsername())
+                .restrictions(restrictionList)
+                .build();
+
+//        Review review = Review.builder()
+//                .restaurantId(restaurant.getId())
+//                .rating(5.0)
+//                .comment("Great food")
+//                .build();
+
+        submitBtn.setOnClickListener(view -> {
+
+            Amplify.DataStore.save(
+                    restaurant,
+                    savedRestaurant -> {
+                        Log.i("MyAmplifyApp", "restaurant saved.");
+                    },
+                    error -> Log.e("MyAmplifyApp",  "Error creating post", error)
+            );
         });
 
 

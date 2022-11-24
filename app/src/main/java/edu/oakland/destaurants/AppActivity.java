@@ -16,8 +16,8 @@ import org.greenrobot.eventbus.ThreadMode;
 
 public class AppActivity extends AppCompatActivity {
 
-    Intent accountIntent;
-    Button accountActivityBtn;
+    Intent accountIntent, viewRestaurantsIntent;
+    Button accountActivityBtn, viewRestaurantsBtn;
     private static final String TAG = "AmplifyApp";
     private AWSMobileClient mobileClient;
 
@@ -30,7 +30,14 @@ public class AppActivity extends AppCompatActivity {
         accountIntent = new Intent(AppActivity.this, AccountActivity.class);
         accountActivityBtn = findViewById(R.id.accountActivityBtn);
 
+        viewRestaurantsIntent = new Intent(AppActivity.this, ViewRestaurantsActivity.class);
+        viewRestaurantsBtn = findViewById(R.id.listItemsActivityBtn);
+
+
         accountActivityBtn.setOnClickListener(view -> startActivity(accountIntent));
+        viewRestaurantsBtn.setOnClickListener(view -> startActivity(viewRestaurantsIntent));
+
+
     }
 
     @Override

@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "SIGNED_OUT":
                     Log.i(TAG, "MainActivity, signed out");
+                    Amplify.DataStore.clear(
+                            () -> Log.i("MyAmplifyApp", "DataStore is cleared."),
+                            failure -> Log.e("MyAmplifyApp", "Failed to clear DataStore.")
+                    );
                     break;
                 case "SESSION_EXPIRED":
                     Log.i(TAG, "MainActivity, SESSION_EXPIRED " + hubEvent.toString());
